@@ -1,0 +1,83 @@
+{
+  "info": {
+    "name": "Podcast Listen Prediction API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET /will-listen-to",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/will-listen-to?feed=https://feeds.megaphone.fm/stuffyoushouldknow&enclosure=https://traffic.megaphone.fm/SN1234567890.mp3&seconds=600&ua=Mozilla/5.0%20(iPhone;%20CPU%20iPhone%20OS%2015_0%20like%20Mac%20OS%20X)&state=CA&genre=Society&content_duration=1800",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "will-listen-to"
+          ],
+          "query": [
+            {
+              "key": "feed",
+              "value": "https://feeds.megaphone.fm/stuffyoushouldknow"
+            },
+            {
+              "key": "enclosure",
+              "value": "https://traffic.megaphone.fm/SN1234567890.mp3"
+            },
+            {
+              "key": "seconds",
+              "value": "600"
+            },
+            {
+              "key": "ua",
+              "value": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X)"
+            },
+            {
+              "key": "state",
+              "value": "CA"
+            },
+            {
+              "key": "genre",
+              "value": "Society"
+            },
+            {
+              "key": "content_duration",
+              "value": "1800"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "POST /will-listen-to",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"feed\": \"https://feeds.megaphone.fm/conan-obrien-needs-a-friend\",\n  \"enclosure\": \"https://feeds.megaphone.fm/episodes/ep-1056.m4a\",\n  \"seconds\": 600,\n  \"ua\": \"Google Podcasts/1.0.0.12345 (Linux; U; Android 13; Pixel 7)\",\n  \"state\": \"Connecticut\",\n  \"genre\": \"Comedy\",\n  \"content_duration\": 1800\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/will-listen-to",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "will-listen-to"
+          ]
+        }
+      }
+    }
+  ]
+}
